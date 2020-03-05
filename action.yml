@@ -2,6 +2,9 @@
 name: 'Publish to Sharepoint'
 description: 'Create a archive of the repository and upload it to a Sharepoint library'
 author: 'Olivier Brassard'
+branding:
+  icon: 'upload-cloud'  
+  color: 'green'
 inputs:
   site_url: 
     description: 'The Sharepoint site url'
