@@ -15,9 +15,14 @@ var creds = {
 
 var now = new Date().toISOString().slice(0,10);
 
+var ref = "";
+if (process.env.GITHUB_REF) {
+  ref = process.env.GITHUB_REF.substr(process.env.GITHUB_REF.lastIndexOf('/') + 1);
+}
+
 var fileOptions = {
     folder: process.env.LIB_FOLDER, 
-    fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}_release_${now}.zip`,
+    fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}_${ref}_${now}.zip`,
     fileContent: fs.readFileSync(process.env.FILE_PATH)
 };
 
