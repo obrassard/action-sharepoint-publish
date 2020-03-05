@@ -15,7 +15,7 @@ var creds = {
  
 var fileOptions = {
     folder: process.env.LIB_FOLDER, 
-    fileName: trimSlashes(`${process.env.GITHUB_REPOSITORY}_release_${process.env.GITHUB_REF || ''}_${new Date().getTime()}.zip`),
+    fileName: trimSlashes(`${process.env.GITHUB_REPOSITORY}_release_${new Date().getTime()}.zip`),
     fileContent: fs.readFileSync(process.env.FILE_PATH)
 };
 
