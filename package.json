@@ -1,6 +1,6 @@
 {
   "name": "@obrassard/action-sharepoint-publish",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Github Action that create an archive of a repository and upload it to a Sharepoint library",
   "main": "index.js",
   "scripts": {
