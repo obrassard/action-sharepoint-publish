@@ -12,10 +12,12 @@ var creds = {
     username: process.env.USER,
     password: process.env.PASSWD
 };
- 
+
+var now = new Date().toISOString().slice(0,10);
+
 var fileOptions = {
     folder: process.env.LIB_FOLDER, 
-    fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}_release_${new Date().getTime()}.zip`,
+    fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}_release_${now}.zip`,
     fileContent: fs.readFileSync(process.env.FILE_PATH)
 };
 
