@@ -19,6 +19,8 @@ var fileOptions = {
     fileContent: fs.readFileSync(process.env.FILE_PATH)
 };
 
+console.log(coreOptions, creds, fileOptions);
+
 spsave(coreOptions, creds, fileOptions)
 .then(function(){
     console.log('Success');
