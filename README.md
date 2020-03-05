@@ -43,7 +43,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Publish to Sharepoint
-      uses: obrassard/action-sharepoint-publish@v1.0
+      uses: obrassard/action-sharepoint-publish@v1.0.1
       with:
        site_url: 'https://you.sharepoint.com/sites/mySite'
        library_folder: 'Shared documents/releases'
