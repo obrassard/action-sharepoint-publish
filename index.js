@@ -24,5 +24,6 @@ spsave(coreOptions, creds, fileOptions)
     console.log('Success');
 })
 .catch(function(err){
-    throw err;
+    console.log(err);
+    process.exit(1);
 });
