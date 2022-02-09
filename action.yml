@@ -1,10 +1,11 @@
 # action.yml
-name: 'Publish to Sharepoint'
-description: 'Create a archive of the repository and upload it to a Sharepoint library'
+name: 'Publish files to Sharepoint'
+description: 'Upload specified files to a Sharepoint library'
 author: 'Olivier Brassard'
 branding:
   icon: 'upload-cloud'  
   color: 'green'
+
 inputs:
   site_url: 
     description: 'The Sharepoint site url'
@@ -19,6 +20,15 @@ inputs:
     description: 'The path where to upload the archive in the library'
     required: true
     default: "Shared documents"
+  file_base:
+    description: 'The base path where to search for files from'
+    required: false
+    default: './'
+  file_glob:
+    description: 'The glob pattern to search for files with'
+    required: false
+    default: '**'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -27,3 +37,5 @@ runs:
     USER : ${{ inputs.sharepoint_user }}
     PASSWD: ${{ inputs.sharepoint_password }}
     LIB_FOLDER : ${{ inputs.library_folder }}
+    FILE_BASE: ${{ inputs.file_base }}
+    FILE_GLOB: ${{ inputs.file_glob }}

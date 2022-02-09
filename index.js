@@ -21,9 +21,9 @@ if (process.env.GITHUB_REF) {
 }
 
 var fileOptions = {
-    folder: process.env.LIB_FOLDER, 
-    fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}_${ref}_${now}.zip`,
-    fileContent: fs.readFileSync(process.env.FILE_PATH)
+    base: process.env.FILE_BASE,
+    glob: process.env.FILE_GLOB,
+    folder: process.env.LIB_FOLDER
 };
 
 spsave(coreOptions, creds, fileOptions)
