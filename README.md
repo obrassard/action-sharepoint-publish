@@ -21,7 +21,7 @@ A simple Github Action that create an archive of a repository and upload it to a
 
 **Required** The user's password. Example `MyPassword123!`. 
 
-> :bulb: Tip : It is recommended to use GitHub Actions Secrets to store sensible informations like passwords
+> :bulb: Tip : It is recommended to use GitHub Actions Secrets to store sensitive informations like passwords
 
 ## Example usage 
 
