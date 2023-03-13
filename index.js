@@ -1,21 +1,24 @@
 const spsave = require("spsave").spsave;
-const spauth = require("node-sp-auth");
+// const spauth = require("node-sp-auth");
 var fs = require("fs");
 
 const trimSlashes = (string) => {
   return string.replace(new RegExp("/", "g"), "_");
 };
 
-let creds;
-spauth
-  .getAuth(process.env.SITE_URL, {
-    clientId: process.env.CLIENTID,
-    clientSecret: process.env.CLIENTSECRET,
-  })
-  .then((res) => {
-    creds = res;
-    return 0;
-  });
+let creds = {
+  clientId: process.env.CLIENTID,
+  clientSecret: process.env.CLIENTSECRET,
+};
+// spauth
+//   .getAuth(process.env.SITE_URL, {
+//     clientId: process.env.CLIENTID,
+//     clientSecret: process.env.CLIENTSECRET,
+//   })
+//   .then((res) => {
+//     creds = res;
+//     return 0;
+//   });
 
 let coreOptions = {
   siteUrl: process.env.SITE_URL,
