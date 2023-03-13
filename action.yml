@@ -1,7 +1,7 @@
 # action.yml
 name: 'Publish to Sharepoint'
-description: 'Create a archive of the repository and upload it to a Sharepoint library'
-author: 'Olivier Brassard'
+description: 'Create a archive of the repository and upload it to a Sharepoint online via client id and secret'
+author: 'Daniel Monaghan'
 branding:
   icon: 'upload-cloud'  
   color: 'green'
@@ -24,6 +24,6 @@ runs:
   image: 'Dockerfile'
   env:
     SITE_URL : ${{ inputs.site_url }}
-    USER : ${{ inputs.sharepoint_user }}
-    PASSWD: ${{ inputs.sharepoint_password }}
+    CLIENTID : ${{ inputs.sharepoint_client_id }}
+    CLIENTSECRET: ${{ inputs.sharepoint_client_secret }}
     LIB_FOLDER : ${{ inputs.library_folder }}

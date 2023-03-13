@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "spsave": "^3.1.6"
+  },
+  "dependencies": {
+    "node-sp-auth": "^3.0.7"
   }
 }

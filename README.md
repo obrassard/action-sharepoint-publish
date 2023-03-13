@@ -43,11 +43,11 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Publish to Sharepoint
-      uses: obrassard/action-sharepoint-publish@v1.0.1
+      uses: purplebearddan/action-sharepoint-publish@v0.0.1
       with:
        site_url: 'https://you.sharepoint.com/sites/mySite'
        library_folder: 'Shared documents/releases'
-       sharepoint_user: ${{ secrets.USER }}
-       sharepoint_password: ${{ secrets.PASSWORD }}
+       sharepoint_client_id: ${{ secrets.CLIENTID }}
+       sharepoint_client_secret: ${{ secrets.CLIENTSECRET }}
 ```
 
