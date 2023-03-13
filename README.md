@@ -13,22 +13,30 @@ A simple Github Action that create an archive of a repository and upload it to a
 
 > :warning: Do not include the first slash
 
-#### `sharepoint_user`
+#### `sharepoint_client_id`
 
-**Required** The username to use for authentication. Example `roger.tester@mydomain.com`.
+**Required** The username to use for authentication. 
 
-#### `sharepoint_password`
+##### Example 
 
-**Required** The user's password. Example `MyPassword123!`. 
+`e2315739-2bca-4d89-a49b-31abc3ce378f`.
 
-> :bulb: Tip : It is recommended to use GitHub Actions Secrets to store sensitive informations like passwords
+#### `sharepoint_client_secret`
+
+**Required** The Sharepoint client secret. 
+
+##### Example
+
+`JVrYn+jdyLk5buuhMtA0CKY9dnv4SMj2SdpZy5Ljcte=`. 
+
+> :bulb: Tip : It is recommended to use GitHub Actions Secrets to store sensitive informations like client secrets and id
 
 ## Example usage 
 
-This action is particularly useful when triggered by new releases :
+This action is particularly useful when triggered by push:
 
 ```yml
-name: 'Sharepoint sync'
+name: 'Sharepoint Sync'
 
 on: push
 
