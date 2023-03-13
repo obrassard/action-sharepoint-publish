@@ -28,11 +28,9 @@ A simple Github Action that create an archive of a repository and upload it to a
 This action is particularly useful when triggered by new releases :
 
 ```yml
-name: 'Sharepoint release'
+name: 'Sharepoint sync'
 
-on:
-  release:
-    types: created
+on: push
 
 jobs:
   publish:
@@ -50,4 +48,3 @@ jobs:
        sharepoint_client_id: ${{ secrets.CLIENTID }}
        sharepoint_client_secret: ${{ secrets.CLIENTSECRET }}
 ```
-
