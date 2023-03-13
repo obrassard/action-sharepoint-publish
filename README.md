@@ -43,7 +43,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Publish to Sharepoint
-      uses: purplebearddan/action-sharepoint-publish@v0.0.1
+      uses: purplebearddan/action-sharepoint-publish@v0.0.2
       with:
        site_url: 'https://you.sharepoint.com/sites/mySite'
        library_folder: 'Shared documents/releases'
