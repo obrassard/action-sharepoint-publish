@@ -35,7 +35,7 @@ if (process.env.GITHUB_REF) {
 
 let fileOptions = {
   folder: process.env.LIB_FOLDER,
-  fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}_${ref}_${now}.zip`,
+  fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}_${ref}.zip`,
   fileContent: fs.readFileSync(process.env.FILE_PATH),
 };
 
