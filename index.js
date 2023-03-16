@@ -1,5 +1,6 @@
-import { spsave } from 'spsave'
-import { readFileSync } from 'fs'
+const spsave = require("spsave").spsave;
+// const spauth = require("node-sp-auth");
+var fs = require("fs");
 
 filePath = process.env.FILE_PATH
 fileExtensionArr = filePath.split('.')
@@ -20,7 +21,7 @@ let coreOptions = {
 
 let fileOptions = {
     folder: process.env.LIB_FOLDER,
-    fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}${fileExtension}`,
+    fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}${}`,
     fileContent: readFileSync(process.env.FILE_PATH),
 }
 
