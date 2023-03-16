@@ -1,7 +1,7 @@
 # action.yml
 name: 'Sync to Sharepoint after push'
 description: 'Create a archive of the repository and upload it to a Sharepoint online via client id and secret'
-author: 'Daniel Monaghan'
+author: 'Olivier Brassard & Daniel Monaghan'
 branding:
   icon: 'upload-cloud'  
   color: 'green'
@@ -19,6 +19,9 @@ inputs:
     description: 'The path where to upload the archive in the library'
     required: true
     default: "Shared documents"
+  file_path: 
+    description: 'To upload a specific file instead of the whole repo, specify the path here'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -27,3 +30,4 @@ runs:
     CLIENTID : ${{ inputs.sharepoint_client_id }}
     CLIENTSECRET: ${{ inputs.sharepoint_client_secret }}
     LIB_FOLDER : ${{ inputs.library_folder }}
+    FILE_PATH : ${{ inputs.file_path }}

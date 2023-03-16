@@ -36,11 +36,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:  
     
-    - name: Cloning repo # This step is required
+    - name: Cloning repo
       uses: actions/checkout@v2
 
     - name: Publish to Sharepoint
-      uses: purplebearddan/action-sharepoint-publish@v0.0.2
+      uses: obrassard/action-sharepoint-publish@v1.1.0
       with:
        site_url: 'https://you.sharepoint.com/sites/mySite'
        library_folder: 'Shared documents/releases'
