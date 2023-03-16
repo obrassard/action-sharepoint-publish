@@ -1,37 +1,28 @@
 # action-sharepoint-publish
+
 A simple Github Action that create an archive of a repository and upload it to a Sharepoint library
 
 ## Inputs
 
-#### `site_url`
+### Example Inputs
 
-**Required** The complete url of your sharepoint site. Example : `https://you.sharepoint.com/sites/mySite`
-
-#### `library_folder`
-
-**Required** The path relative to the library where to upload a file. Example `Shared documents/releases`.
-
-> :warning: Do not include the first slash
-
-#### `sharepoint_client_id`
-
-**Required** The username to use for authentication. 
-
-##### Example 
-
-`e2315739-2bca-4d89-a49b-31abc3ce378f`.
-
-#### `sharepoint_client_secret`
-
-**Required** The Sharepoint client secret. 
-
-##### Example
-
-`JVrYn+jdyLk5buuhMtA0CKY9dnv4SMj2SdpZy5Ljcte=`. 
+```yml
+  # The complete url of your sharepoint site.
+  site_url: 'https://you.sharepoint.com/sites/mySite',
+  
+  # The path relative to the library where to upload a file.
+  library_folder: 'Shared Documents/Github Sync',
+  
+  # The client id to use for authentication.
+  sharepoint_client_id: 'e2315739-2bca-4d89-a49b-31abc3ce378f',
+  
+  # The Sharepoint client secret.
+  sharepoint_client_secret: 'JVrYn+jdyLk5buuhMtA0CKY9dnv4SMj2SdpZy5Ljcte='
+```
 
 > :bulb: Tip : It is recommended to use GitHub Actions Secrets to store sensitive informations like client secrets and id
 
-## Example usage 
+## Example usage
 
 This action is particularly useful when triggered by push:
 
@@ -43,7 +34,7 @@ on: push
 jobs:
   publish:
     runs-on: ubuntu-latest
-    steps:
+    steps:  
     
     - name: Cloning repo # This step is required
       uses: actions/checkout@v2
