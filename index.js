@@ -1,5 +1,5 @@
 const spsave = require("spsave").spsave;
-var fs = require("fs");
+const fs = require("fs");
 
 const filePath = process.env.FILE_PATH
 const fileExtensionArr = filePath.split('.')
