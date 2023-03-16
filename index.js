@@ -1,8 +1,9 @@
 import { spsave } from 'spsave'
 import { readFileSync } from 'fs'
 
-fileExtensionArr = process.env.FILE_PATH.split('.')
-fileExtension = fileExtensionArr[fileExtensionArr - 1]
+filePath = process.env.FILE_PATH
+fileExtensionArr = filePath.split('.')
+fileExtension = `.${fileExtensionArr[fileExtensionArr.length - 1]}`
 
 const trimSlashes = (string) => {
     return string.replace(new RegExp('/', 'g'), '_')
@@ -19,7 +20,7 @@ let coreOptions = {
 
 let fileOptions = {
     folder: process.env.LIB_FOLDER,
-    fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}${}`,
+    fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}${fileExtension}`,
     fileContent: readFileSync(process.env.FILE_PATH),
 }
 
