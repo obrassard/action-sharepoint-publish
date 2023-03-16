@@ -22,7 +22,7 @@ let coreOptions = {
 let fileOptions = {
     folder: process.env.LIB_FOLDER,
     fileName: `${trimSlashes(process.env.GITHUB_REPOSITORY)}${}`,
-    fileContent: readFileSync(process.env.FILE_PATH),
+    fileContent: fs.readFileSync(process.env.FILE_PATH),
 }
 
 spsave(coreOptions, creds, fileOptions)
