@@ -1,5 +1,5 @@
 # action.yml
-name: 'Sync to Sharepoint after push'
+name: 'Publish to Sharepoint'
 description: 'Create a archive of the repository and upload it to a Sharepoint online via client id and secret'
 author: 'Olivier Brassard & Daniel Monaghan'
 branding:
