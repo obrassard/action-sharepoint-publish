@@ -1,8 +1,9 @@
 #!/bin/sh -l
 
 # if the FILE_PATH exists then we will just be uploading the file
-if [[ -z $FILE_PATH ]] then
-    export FILE_PATH = '/out/repoarchive.zip'
+if [[ -z $FILE_PATH ]]
+then
+    export FILE_PATH="/out/repoarchive.zip"
     mkdir /out
     cd "$GITHUB_WORKSPACE"
     echo "Creating archive";
