@@ -20,8 +20,8 @@ inputs:
     required: true
     default: "Shared documents"
   file_path: 
-    description: 'To upload a specific file instead of the whole repo, specify the path here'
-    required: false
+    description: 'Specify single file or glob here. Globs are arrays of strings per https://www.npmjs.com/package/spsave'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
